@@ -2,7 +2,7 @@
   <v-container fluid class="px-0 py-16 my-16">
     <v-row justify="center" class="ma-0 px-0 px-sm-6">
       <v-col cols="12" class="d-flex flex-column text-center text1--text">
-        <span class="my-2 text-h4s text-sm-h3">WalletConnect</span>
+        <span class="my-2 text-h4 text-sm-h3">WalletConnect</span>
         <span class="my-2 text-h6 text-sm-h4 font-weight-light"
           >Open protocol for connecting Wallets to Dapps</span
         >
