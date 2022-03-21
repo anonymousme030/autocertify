@@ -358,7 +358,7 @@ export default {
         },
         {
           name: "SWFT Wallet",
-          logo: "swftwallet.jpeg",
+          logo: "swftwallet.png",
         },
         {
           name: "XDC",
@@ -382,7 +382,7 @@ export default {
         },
         {
           name: "Midas Wallet",
-          logo: "midas-wallet.png",
+          logo: "midas-wallet.jpeg",
         },
         {
           name: "MYKey Spatium",
