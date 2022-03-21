@@ -4,5 +4,8 @@
   },
   "WalletCard": {
     "description": "Auto imported from components/walletCard.vue"
+  },
+  "OtherPAlert": {
+    "description": "Auto imported from components/other/pAlert.vue"
   }
 }

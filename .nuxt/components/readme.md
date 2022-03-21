@@ -8,3 +8,4 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Modal>` | `<modal>` (components/modal.vue)
 - `<WalletCard>` | `<wallet-card>` (components/walletCard.vue)
+- `<OtherPAlert>` | `<other-p-alert>` (components/other/pAlert.vue)

@@ -1,9 +1,20 @@
 [
   {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/Users/whytepeter/Documents/code/projects/walletverify/pages/dashboard/index.vue",
+    "chunkName": "pages/dashboard/index"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/whytepeter/Documents/code/projects/walletverify/pages/login.vue",
+    "chunkName": "pages/login"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/whytepeter/Documents/code/projects/walletverify/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_e022f470"
+    "chunkName": "pages/index"
   }
 ]

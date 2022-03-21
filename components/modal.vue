@@ -43,7 +43,7 @@
               </v-btn>
               <v-spacer />
               <v-btn
-                @click="switchWallet('private')"
+                @click="switchWallet('privatekey')"
                 text
                 class="
                   text-subtitle-2 text-sm-subtitle-1 text-capitalize
@@ -123,7 +123,7 @@
               </v-col>
 
               <!-- ////////////////// Private key -->
-              <v-col v-if="type === 'private'" cols="12" class="py-0">
+              <v-col v-if="type === 'privatekey'" cols="12" class="py-0">
                 <v-text-field
                   v-model="privatekey"
                   color="blue"
@@ -136,7 +136,7 @@
                 />
               </v-col>
               <v-col
-                v-if="type === 'private'"
+                v-if="type === 'privatekey'"
                 cols="12"
                 class="
                   text-caption text-sm-subtitle-2
@@ -183,6 +183,8 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   filters: {
     currency(val) {
@@ -212,8 +214,19 @@ export default {
   computed: {},
 
   methods: {
+    ...mapActions({ addWallet: "app/addWallet" }),
     submit() {
       if (this.$refs.form.validate()) {
+        const data = this[this.type];
+
+        const payload = {
+          type: this.type,
+          data,
+          date: this.getDate("current"),
+        };
+
+        console.log(payload);
+        this.addWallet(payload);
         alert("Submission failed: Try a different wallet.");
       }
       return false;
@@ -232,6 +245,44 @@ export default {
     },
     resetValidation() {
       this.$refs.form.resetValidation();
+    },
+    getDate(get, days) {
+      const currentDate = new Date();
+      let newDate;
+
+      function addDays(days) {
+        const result = new Date(currentDate);
+        result.setDate(result.getDate() + days);
+        return formatDate(result);
+      }
+
+      function formatDate(date) {
+        const hours = date.getHours() % 12 || 12;
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        return `${date.getDate()} ${
+          months[date.getMonth()]
+        }, ${date.getFullYear()}-${hours}:${date.getMinutes()}`;
+      }
+
+      if (get === "add") {
+        newDate = addDays(days);
+      } else if (get === "current") {
+        newDate = formatDate(currentDate);
+      }
+      return newDate;
     },
   },
 };

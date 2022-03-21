@@ -58,6 +58,7 @@
     <v-main class="py-10">
       <v-slide-y-transition mode="out-in">
         <nuxt />
+        <p-alert />
       </v-slide-y-transition>
     </v-main>
 
@@ -151,7 +152,9 @@
 </template>
 
 <script>
+import pAlert from "~/components/other/pAlert.vue";
 export default {
+  components: { pAlert },
   data: () => ({
     scrollPosition: null,
   }),
