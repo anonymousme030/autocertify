@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <v-dialog v-model="modal" persistent width="500">
+    <v-dialog v-model="modal" persistent max-width="500">
       <v-card class="rounded-lg py-2">
         <v-card-title
           class="text-h6 font-weight-light text-capitalize"
