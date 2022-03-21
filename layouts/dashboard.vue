@@ -57,7 +57,7 @@
     </v-navigation-drawer>
     <p-side-bar />
 
-    <v-main class="openSans text2--text py-10">
+    <v-main class="openSans text2--text pt-6 pb-12">
       <!-- This code alerts the user if he/she is offline -->
       <v-card v-if="$nuxt.isOffline" tile flat dark color="secondary">
         <v-card-text class="py-1">
