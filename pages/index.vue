@@ -54,8 +54,7 @@
         <wallet-card
           v-for="wallet in wallets"
           :key="wallet.name"
-          :logo="wallet.logo"
-          :name="wallet.name"
+          :wallet="wallet"
         />
       </v-col>
       <v-col cols="12">
@@ -80,8 +79,7 @@
         <wallet-card
           v-for="wallet in wallets2"
           :key="wallet.name"
-          :logo="wallet.logo"
-          :name="wallet.name"
+          :wallet="wallet"
         />
       </v-col>
     </v-row>
