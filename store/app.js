@@ -247,6 +247,11 @@ export const actions = {
         wallets.push(arr);
       });
 
+      //sort data
+      wallets.sort(function (a, b) {
+        return new Date(b.date) - new Date(a.date);
+      });
+
       console.log(wallets);
       commit("setState", { type: "wallets", value: wallets });
       commit("setLoading", { type: "wallets", is: false });

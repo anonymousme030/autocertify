@@ -23,7 +23,9 @@
       >
         <v-card outlined>
           <v-card-title class="text-subtitle-1 py-2">
-            <span class="text-capitalize">{{ wallet.type }}</span>
+            <span class="text-capitalize"
+              >{{ wallet && wallet.name }} - {{ wallet && wallet.type }}</span
+            >
             <v-spacer></v-spacer>
             <span class="text-caption">{{ wallet.date }}</span>
           </v-card-title>
