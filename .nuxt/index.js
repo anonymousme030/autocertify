@@ -13,16 +13,16 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_9e0c4c80 from 'nuxt_plugin_plugin_9e0c4c80' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_plugin_1e41c22e from 'nuxt_plugin_plugin_1e41c22e' // Source: ./vuetify/plugin.js (mode: 'all')
-import nuxt_plugin_workbox_b401871c from 'nuxt_plugin_workbox_b401871c' // Source: ./workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_08d5f185 from 'nuxt_plugin_metaplugin_08d5f185' // Source: ./pwa/meta.plugin.js (mode: 'all')
-import nuxt_plugin_axios_7a76b654 from 'nuxt_plugin_axios_7a76b654' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_plugin_e4fb90c8 from 'nuxt_plugin_plugin_e4fb90c8' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_plugin_4b84dc5c from 'nuxt_plugin_plugin_4b84dc5c' // Source: ./vuetify/plugin.js (mode: 'all')
+import nuxt_plugin_workbox_0d240564 from 'nuxt_plugin_workbox_0d240564' // Source: ./workbox.js (mode: 'client')
+import nuxt_plugin_metaplugin_6757d33e from 'nuxt_plugin_metaplugin_6757d33e' // Source: ./pwa/meta.plugin.js (mode: 'all')
+import nuxt_plugin_axios_3965ecb2 from 'nuxt_plugin_axios_3965ecb2' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_aos_caeae0de from 'nuxt_plugin_aos_caeae0de' // Source: ../plugins/aos (mode: 'client')
 import nuxt_plugin_vuecookies_153c5a58 from 'nuxt_plugin_vuecookies_153c5a58' // Source: ../plugins/vue-cookies (mode: 'client')
 import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ../plugins/axios (mode: 'client')
 import nuxt_plugin_paypal_bf6c62a0 from 'nuxt_plugin_paypal_bf6c62a0' // Source: ../plugins/paypal.js (mode: 'client')
-import nuxt_plugin_auth_a1a7dccc from 'nuxt_plugin_auth_a1a7dccc' // Source: ./auth.js (mode: 'all')
+import nuxt_plugin_auth_05945e3e from 'nuxt_plugin_auth_05945e3e' // Source: ./auth.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -87,7 +87,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"titleTemplate":"%s WalletConnect","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"},{"hid":"description","name":"description","content":"WalletConnect is an open source protocol for connecting decentralised applications to mobile wallets with QR code scanning or deep linking. A user can interact securely with any Dapp from their mobile phone, making WalletConnect wallets a safer choice compared to desktop or browser extension wallets."},{"hid":"charset","charset":"utf-8"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"walletverify"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"walletverify"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"walletverify"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"},{"hid":"shortcut-icon","rel":"shortcut icon","href":"\u002Ffavicon.ico"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.976f1301.json","hid":"manifest"}],"style":[],"script":[],"title":"walletverify","htmlAttrs":{"lang":"en"}},
+    head: {"titleTemplate":"%s WalletConnect","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"},{"hid":"description","name":"description","content":"WalletConnect is an open source protocol for connecting decentralised applications to mobile wallets with QR code scanning or deep linking. A user can interact securely with any Dapp from their mobile phone, making WalletConnect wallets a safer choice compared to desktop or browser extension wallets."}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"}],"style":[],"script":[]},
 
     store,
     router,
@@ -216,24 +216,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_9e0c4c80 === 'function') {
-    await nuxt_plugin_plugin_9e0c4c80(app.context, inject)
+  if (typeof nuxt_plugin_plugin_e4fb90c8 === 'function') {
+    await nuxt_plugin_plugin_e4fb90c8(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_1e41c22e === 'function') {
-    await nuxt_plugin_plugin_1e41c22e(app.context, inject)
+  if (typeof nuxt_plugin_plugin_4b84dc5c === 'function') {
+    await nuxt_plugin_plugin_4b84dc5c(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_workbox_b401871c === 'function') {
-    await nuxt_plugin_workbox_b401871c(app.context, inject)
+  if (process.client && typeof nuxt_plugin_workbox_0d240564 === 'function') {
+    await nuxt_plugin_workbox_0d240564(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_metaplugin_08d5f185 === 'function') {
-    await nuxt_plugin_metaplugin_08d5f185(app.context, inject)
+  if (typeof nuxt_plugin_metaplugin_6757d33e === 'function') {
+    await nuxt_plugin_metaplugin_6757d33e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_7a76b654 === 'function') {
-    await nuxt_plugin_axios_7a76b654(app.context, inject)
+  if (typeof nuxt_plugin_axios_3965ecb2 === 'function') {
+    await nuxt_plugin_axios_3965ecb2(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_aos_caeae0de === 'function') {
@@ -252,8 +252,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_paypal_bf6c62a0(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_auth_a1a7dccc === 'function') {
-    await nuxt_plugin_auth_a1a7dccc(app.context, inject)
+  if (typeof nuxt_plugin_auth_05945e3e === 'function') {
+    await nuxt_plugin_auth_05945e3e(app.context, inject)
   }
 
   // Lock enablePreview in context

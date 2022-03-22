@@ -50,7 +50,7 @@
           </p>
         </div>
       </v-col>
-      <v-col cols="12" class="d-flex flex-wrap justify-space-around">
+      <v-col id="wallet" cols="12" class="d-flex flex-wrap justify-start">
         <wallet-card
           v-for="wallet in wallets"
           :key="wallet.name"

@@ -2,19 +2,22 @@
   {
     "name": "dashboard",
     "path": "/dashboard",
-    "component": "/Users/whytepeter/Documents/code/projects/walletverify/pages/dashboard/index.vue",
-    "chunkName": "pages/dashboard/index"
+    "component": "/Users/whytepeter/Documents/code/projects/iwallet/pages/dashboard/index.vue",
+    "chunkName": "pages/dashboard/index",
+    "_name": "_3a306531"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "/Users/whytepeter/Documents/code/projects/walletverify/pages/login.vue",
-    "chunkName": "pages/login"
+    "component": "/Users/whytepeter/Documents/code/projects/iwallet/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_91c446fa"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/whytepeter/Documents/code/projects/walletverify/pages/index.vue",
-    "chunkName": "pages/index"
+    "component": "/Users/whytepeter/Documents/code/projects/iwallet/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_25138d28"
   }
 ]

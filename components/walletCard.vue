@@ -5,7 +5,7 @@
     max-width="120"
     class="rounded-lg ma-1"
   >
-    <v-card-text class="d-flex flex-column align-center">
+    <v-card-text class="d-flex flex-column align-center pb-0">
       <v-avatar size="80">
         <img
           :src="`/logo/${wallet && wallet.logo}`"
