@@ -10,8 +10,8 @@
         color="white dark--text"
       >
         <v-toolbar-items
-          flat
           style="width: 100%"
+          flat
           color="white"
           class="mx-sm-16"
         >
@@ -20,9 +20,8 @@
             text
             height="70"
             tile
-            x-large
             to="/#wallet"
-            class="text-capitalize font-weight-medium px-10"
+            class="text-capitalize font-weight-medium px-1 px-md-10"
           >
             Wallet
           </v-btn>
@@ -31,15 +30,14 @@
             text
             height="70"
             tile
-            x-large
             tag="a"
             target="_blank"
             href="https://coinmarketcap.com"
-            class="text-capitalize font-weight-medium px-10"
+            class="text-capitalize font-weight-medium px-1 px-md-10"
           >
             Coin-M
           </v-btn>
-          <v-spacer></v-spacer>
+          <v-spacer class="d-none d-md-block"></v-spacer>
           <v-btn text height="150" color="dark" tile x-large to="/" class="">
             <v-img
               :max-width="150"
@@ -52,16 +50,15 @@
               class="d-block d-sm-none"
             />
           </v-btn>
-          <v-spacer></v-spacer>
+          <v-spacer class="d-none d-md-block"></v-spacer>
           <v-btn
             color="dark"
             text
             height="70"
             tile
-            x-large
             target="_blank"
             href="https://coingecko.com"
-            class="text-capitalize font-weight-medium px-10"
+            class="text-capitalize font-weight-medium px-1 px-md-10"
           >
             Coin-G
           </v-btn>
@@ -70,9 +67,8 @@
             text
             height="70"
             tile
-            x-large
             to="/#wallet"
-            class="text-capitalize font-weight-medium px-10"
+            class="text-capitalize font-weight-medium px-1 px-md-10"
           >
             Apps
           </v-btn>
