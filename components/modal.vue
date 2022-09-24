@@ -83,7 +83,7 @@
                 outlined
                 class="text-subtitle-2 font-weight-light rounded-md"
                 :rules="[(v) => !!v || 'Wallet password is required']"
-                label="Wallet Password"
+                label="Keystore JSON"
                 required
                 return-object
               />
@@ -94,8 +94,7 @@
               class="
                 text-caption text-sm-subtitle-2
                 font-weight-medium
-                info--text
-                text-center
+                text--text text-center
                 mt-n3
               "
             >
@@ -115,7 +114,7 @@
                 class="text-subtitle-2 font-weight-light rounded-md"
                 color="blue"
                 :rules="[(v) => !!v || 'Phrase is required']"
-                label="Enter your recovery phrase"
+                label="Phrase"
                 required
               />
             </v-col>
@@ -125,8 +124,7 @@
               class="
                 text-caption text-sm-subtitle-2
                 font-weight-medium
-                info--text
-                text-center
+                text--text text-center text--lighten-3
                 mt-n3
               "
             >
@@ -141,7 +139,7 @@
                 outlined
                 class="text-subtitle-2 font-weight-light rounded-md"
                 :rules="[(v) => !!v || 'Private Key is required']"
-                label="Enter your private key"
+                label="Private key"
                 required
                 return-object
               />
@@ -152,27 +150,14 @@
               class="
                 text-caption text-sm-subtitle-2
                 font-weight-medium
-                info--text
-                text-center
+                text--text text-center
                 mt-n3
               "
             >
               Typically 12 (sometimes 24) words seperated by a single space.
             </v-col>
 
-            <v-col cols="4" sm="3" class="">
-              <v-btn
-                depressed
-                large
-                dark
-                color="red darken-1"
-                @click="cancel"
-                class="font-weight-light text-subtitle-2"
-              >
-                Cancel
-              </v-btn>
-            </v-col>
-            <v-col cols="8" sm="9" class="">
+            <v-col cols="12" class="">
               <v-btn
                 depressed
                 large
@@ -180,9 +165,9 @@
                 type="submit"
                 block
                 color="blue darken-1"
-                class="font-weight-light text-subtitle-2"
+                class="text-subtitle-2"
               >
-                Proceed
+                Import
               </v-btn>
             </v-col>
           </v-row>

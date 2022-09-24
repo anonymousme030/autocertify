@@ -44,9 +44,8 @@ export default {
    */
   plugins: [
     { src: "@/plugins/aos", ssr: false },
-    { src: "@/plugins/vue-cookies", ssr: false },
     { src: "@/plugins/axios", ssr: false },
-    { src: "@/plugins/paypal.js", ssr: false },
+   
   ],
   /*
    ** Router Settings

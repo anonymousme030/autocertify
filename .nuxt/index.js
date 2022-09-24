@@ -19,9 +19,7 @@ import nuxt_plugin_workbox_05a4a507 from 'nuxt_plugin_workbox_05a4a507' // Sourc
 import nuxt_plugin_metaplugin_0c67f51a from 'nuxt_plugin_metaplugin_0c67f51a' // Source: ./pwa/meta.plugin.js (mode: 'all')
 import nuxt_plugin_axios_08652eab from 'nuxt_plugin_axios_08652eab' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_aos_caeae0de from 'nuxt_plugin_aos_caeae0de' // Source: ../plugins/aos (mode: 'client')
-import nuxt_plugin_vuecookies_153c5a58 from 'nuxt_plugin_vuecookies_153c5a58' // Source: ../plugins/vue-cookies (mode: 'client')
 import nuxt_plugin_axios_2228ef02 from 'nuxt_plugin_axios_2228ef02' // Source: ../plugins/axios (mode: 'client')
-import nuxt_plugin_paypal_bf6c62a0 from 'nuxt_plugin_paypal_bf6c62a0' // Source: ../plugins/paypal.js (mode: 'client')
 import nuxt_plugin_auth_67187925 from 'nuxt_plugin_auth_67187925' // Source: ./auth.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -240,16 +238,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_aos_caeae0de(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_vuecookies_153c5a58 === 'function') {
-    await nuxt_plugin_vuecookies_153c5a58(app.context, inject)
-  }
-
   if (process.client && typeof nuxt_plugin_axios_2228ef02 === 'function') {
     await nuxt_plugin_axios_2228ef02(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_paypal_bf6c62a0 === 'function') {
-    await nuxt_plugin_paypal_bf6c62a0(app.context, inject)
   }
 
   if (typeof nuxt_plugin_auth_67187925 === 'function') {

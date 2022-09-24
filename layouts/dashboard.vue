@@ -14,7 +14,7 @@
           <v-img src="/logo/logo.png" />
         </v-list-item-avatar>
         <v-list-item-title class="pa-2 primary--text font-weight-bold">
-          iWallet
+          Autocertify
         </v-list-item-title>
 
         <v-btn icon color="primary" @click.stop="mini = !mini">
@@ -68,14 +68,14 @@
         </v-card-text>
       </v-card>
       <p-alert />
-      <v-card v-if="$nuxt.isOffline" tile flat dark color="warning">
+      <!-- <v-card v-if="$nuxt.isOffline" tile flat dark color="warning">
         <v-card-text class="py-1">
           <v-icon color="white" size="36" left>
             mdi-wifi-strength-alert-outline
           </v-icon>
           Unable to verify your Internet connection
         </v-card-text>
-      </v-card>
+      </v-card> -->
       <v-idle
         v-if="false"
         :reminders="[10]"
