@@ -1,171 +1,27 @@
 <template>
   <v-app>
-    <div>
-      <v-app-bar
-        fixed
-        flat
-        dark
-        :elevate-on-scroll="true"
-        height="150"
-        color="white dark--text"
-      >
-        <v-toolbar-items
-          style="width: 100%"
-          flat
-          color="white"
-          class="mx-sm-16"
-        >
-          <v-btn
-            color="dark"
-            text
-            height="70"
-            tile
-            to="/#wallet"
-            class="text-capitalize font-weight-medium px-1 px-md-10"
-          >
-            Wallet
-          </v-btn>
-          <v-btn
-            color="dark"
-            text
-            height="70"
-            tile
-            tag="a"
-            target="_blank"
-            href="https://coinmarketcap.com"
-            class="text-capitalize font-weight-medium px-1 px-md-10"
-          >
-            Coin-M
-          </v-btn>
-          <v-spacer class="d-none d-md-block"></v-spacer>
-          <v-btn text height="150" color="dark" tile x-large to="/" class="">
-            <v-img
-              :max-width="150"
-              src="/logo/logo.png"
-              class="d-none d-sm-block"
-            />
-            <v-img
-              :max-width="70"
-              src="/logo/logo.png"
-              class="d-block d-sm-none"
-            />
-          </v-btn>
-          <v-spacer class="d-none d-md-block"></v-spacer>
-          <v-btn
-            color="dark"
-            text
-            height="70"
-            tile
-            target="_blank"
-            href="https://coingecko.com"
-            class="text-capitalize font-weight-medium px-1 px-md-10"
-          >
-            Coin-G
-          </v-btn>
-          <v-btn
-            color="dark"
-            text
-            height="70"
-            tile
-            to="/#wallet"
-            class="text-capitalize font-weight-medium px-1 px-md-10"
-          >
-            Apps
-          </v-btn>
-        </v-toolbar-items>
-      </v-app-bar>
-    </div>
-
-    <v-main class="py-10">
-      <v-slide-y-transition mode="out-in">
+    <v-main class="dark">
+      <v-slide-y-transition mode="out-in" class="">
         <nuxt />
         <p-alert />
       </v-slide-y-transition>
     </v-main>
 
-    <v-footer
-      id="contact"
-      style="min-height: 300px"
-      color="primary white--text"
-      class="justify-center px-0 py-6"
-    >
+    <v-footer id="contact" color="yellow darken-1" class="justify-center px-0">
       <v-row
         no-gutterss
         justify="center"
-        class="mt-n10 align-center ma-0 pa-4 px-md-16"
+        class="align-center ma-0 pa-2 px-md-16"
       >
-        <v-col cols="12" md="4" class="text-center text-sm-left">
-          <div class="white--text font-weight-medium">
-            <span class="text-h6 d-block"> Wallet Verify </span>
-            <span class="font-weight-light"
-              >858 Zenway Blvd Frigate Bay, Saint Kitts Saint Kitts and
-              Nevis</span
-            >
-          </div>
-
-          <div class="primary--text mt-4">© 2022 Wallet Verify.</div>
-        </v-col>
-        <v-col cols="12" md="4" class="text-center text-sm-left">
-          <span class="text-h6 d-block"> Social</span>
-          <div>
-            <v-btn
-              text
-              color="white"
-              class="text-capitalize font-weight-medium px-0"
-            >
-              <v-icon color="white" left size="20"> mdi-facebook </v-icon>
-              Facebook
-            </v-btn>
-            <br />
-            <v-btn
-              text
-              color="white"
-              class="text-capitalize font-weight-medium px-0"
-            >
-              <v-icon color="white" left size="20"> mdi-twitter </v-icon>
-              Twitter
-            </v-btn>
-            <br />
-            <v-btn
-              text
-              color="white"
-              class="text-capitalize font-weight-medium px-0"
-            >
-              <v-icon color="white" left size="20"> mdi-whatsapp </v-icon>
-              Whatsapp
-            </v-btn>
-          </div>
-        </v-col>
-        <v-col cols="12" md="4" class="text-center text-sm-left">
-          <span class="text-h6 d-block">Menu</span>
-          <div>
-            <v-btn
-              text
-              color="white"
-              class="text-capitalize font-weight-medium px-0"
-            >
-              <v-icon color="white" left size="20"> mdi-home-variant </v-icon>
-              Home
-            </v-btn>
-            <br />
-            <v-btn
-              text
-              color="white"
-              class="text-capitalize font-weight-medium px-0"
-            >
-              <v-icon color="white" left size="20"> mdi-account-box </v-icon>
-              Contact
-            </v-btn>
-            <br />
-            <v-btn
-              text
-              color="white"
-              class="text-capitalize font-weight-medium px-0"
-            >
-              <v-icon color="white" left size="20"> mdi-chart-line </v-icon>
-              Chart
-            </v-btn>
-          </div>
+        <v-col
+          cols="12"
+          class="
+            primary--text
+            text-center text-subtitle-2 text-sm-subtitle-1
+            font-weight-light
+          "
+        >
+          Copyright @2022 Auto-certify
         </v-col>
       </v-row>
     </v-footer>

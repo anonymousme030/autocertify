@@ -4,9 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _3a306531 = () => interopDefault(import('../pages/dashboard/index.vue' /* webpackChunkName: "pages/dashboard/index" */))
-const _91c446fa = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
-const _25138d28 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _72069eae = () => interopDefault(import('../pages/connect/index.vue' /* webpackChunkName: "pages/connect/index" */))
+const _06cf44d0 = () => interopDefault(import('../pages/dashboard/index.vue' /* webpackChunkName: "pages/dashboard/index" */))
+const _6ff24cac = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _3a687496 = () => interopDefault(import('../pages/connect/_id.vue' /* webpackChunkName: "pages/connect/_id" */))
+const _034192da = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -20,16 +22,24 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/connect",
+    component: _72069eae,
+    name: "connect"
+  }, {
     path: "/dashboard",
-    component: _3a306531,
+    component: _06cf44d0,
     name: "dashboard"
   }, {
     path: "/login",
-    component: _91c446fa,
+    component: _6ff24cac,
     name: "login"
   }, {
+    path: "/connect/:id",
+    component: _3a687496,
+    name: "connect-id"
+  }, {
     path: "/",
-    component: _25138d28,
+    component: _034192da,
     name: "index"
   }],
 

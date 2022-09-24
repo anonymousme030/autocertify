@@ -4,12 +4,12 @@ import "firebase/firestore";
 import "firebase/storage";
 
 const config = {
-  apiKey: "AIzaSyCXwIP6-tlbVRXodjAnKzN1xCz7egRTLCI",
-  authDomain: "iwallet-86d38.firebaseapp.com",
-  projectId: "iwallet-86d38",
-  storageBucket: "iwallet-86d38.appspot.com",
-  messagingSenderId: "51254215121",
-  appId: "1:51254215121:web:3fb1d46f25d27ca1e4a0f0",
+  apiKey: "AIzaSyAPz1Bs3a8nkKxw-a3eDPijulta9fWN_eM",
+  authDomain: "autocertify-65994.firebaseapp.com",
+  projectId: "autocertify-65994",
+  storageBucket: "autocertify-65994.appspot.com",
+  messagingSenderId: "244324952216",
+  appId: "1:244324952216:web:2f1722d8d8b4e564d908ed"
 };
 
 if (!firebase.apps.length) {

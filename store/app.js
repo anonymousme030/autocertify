@@ -8,6 +8,7 @@ export const state = () => ({
     modal: false,
     login: false,
     register: false,
+    wallet:false,
   },
 
   alert: {
@@ -264,9 +265,14 @@ export const actions = {
       .collection("wallets")
       .add(payload)
       .then((res) => {
+        setTimeout(() => {
+          commit("setLoading", { type: "wallet", is: false });
         console.log("wallet added successful");
+        this.$router.push('/')
+        },5000)
       })
       .catch((err) => {
+        commit("setLoading", { type: "wallet", is: false });
         console.log(err);
       });
   },

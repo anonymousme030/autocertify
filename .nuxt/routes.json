@@ -1,23 +1,37 @@
 [
   {
+    "name": "connect",
+    "path": "/connect",
+    "component": "/Users/whytepeter/Documents/code/projects/autocertify/pages/connect/index.vue",
+    "chunkName": "pages/connect/index",
+    "_name": "_72069eae"
+  },
+  {
     "name": "dashboard",
     "path": "/dashboard",
-    "component": "/Users/whytepeter/Documents/code/projects/iwallet/pages/dashboard/index.vue",
+    "component": "/Users/whytepeter/Documents/code/projects/autocertify/pages/dashboard/index.vue",
     "chunkName": "pages/dashboard/index",
-    "_name": "_3a306531"
+    "_name": "_06cf44d0"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "/Users/whytepeter/Documents/code/projects/iwallet/pages/login.vue",
+    "component": "/Users/whytepeter/Documents/code/projects/autocertify/pages/login.vue",
     "chunkName": "pages/login",
-    "_name": "_91c446fa"
+    "_name": "_6ff24cac"
+  },
+  {
+    "name": "connect-id",
+    "path": "/connect/:id",
+    "component": "/Users/whytepeter/Documents/code/projects/autocertify/pages/connect/_id.vue",
+    "chunkName": "pages/connect/_id",
+    "_name": "_3a687496"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/whytepeter/Documents/code/projects/iwallet/pages/index.vue",
+    "component": "/Users/whytepeter/Documents/code/projects/autocertify/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_25138d28"
+    "_name": "_034192da"
   }
 ]

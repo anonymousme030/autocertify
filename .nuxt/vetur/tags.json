@@ -1,4 +1,7 @@
 {
+  "Loader": {
+    "description": "Auto imported from components/Loader.vue"
+  },
   "Modal": {
     "description": "Auto imported from components/modal.vue"
   },

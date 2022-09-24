@@ -5,7 +5,7 @@
         <v-card
           flat
           max-width="400"
-          color="transparent"
+          color=""
           class="mx-auto rounded-lg px-md-4 py-4"
         >
           <v-card-title
@@ -128,7 +128,7 @@ export default {
     }),
   },
   methods: {
-    ...mapActions({ loginUser: "app/loginUser" }),
+    ...mapActions({ loginUser: "app/loginUser", register: "app/register" }),
 
     submit() {
       this.$refs.form.validate();
@@ -140,6 +140,7 @@ export default {
         };
         console.log(payload);
         this.loginUser(payload);
+        // this.register(payload);
       }
     },
 

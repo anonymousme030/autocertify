@@ -16,7 +16,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: "%s WalletConnect",
+    titleTemplate: "%s Autocertify",
     meta: [
       { charset: "utf-8" },
       {
@@ -81,7 +81,7 @@ export default {
    ** modifying the default loader
    */
   loadingIndicator: {
-    name: "wandering-cubes",
+    name: "chasing-dots",
     color: "#35484f",
     background: "white",
   },
@@ -109,7 +109,7 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: "#35484f",
+          primary: "#041e37",
           dark: "#212529",
           secondary: "#FFA000",
           accent: "#0094FF",
