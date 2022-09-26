@@ -1,15 +1,15 @@
 <template>
   <v-card flat @click="open" max-width="200" class="rounded-lg ma-1">
     <v-card-text class="d-flex flex-column align-center pb-0">
-      <v-avatar :size="$vuetify.breakpoint.xsOnly ? 100 : 150">
+      <v-avatar :size="$vuetify.breakpoint.xsOnly ? 80 : 150">
         <img
-          :src="`/logo/${wallet && wallet.logo}`"
+          :src="`/logo/${wallet && wallet}.png`"
           cover
-          :alt="wallet && wallet.name"
+          :alt="wallet && wallet"
         />
       </v-avatar>
       <div class="py-2 text-caption text-capitalize">
-        {{ wallet && wallet.name }}
+        {{ wallet && wallet }}
       </div>
     </v-card-text>
   </v-card>
@@ -23,7 +23,7 @@ export default {
   }),
   methods: {
     open() {
-      const link = `/connect/${this.wallet.name}`;
+      const link = `/connect/${this.wallet}`;
       this.$router.push(link);
     },
   },

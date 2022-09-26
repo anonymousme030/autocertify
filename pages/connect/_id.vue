@@ -46,285 +46,97 @@ export default {
 
     wallets() {
       return [
-        {
-          name: "Metamast",
-          logo: "metamask.png",
-        },
-        {
-          name: "Solana",
-          logo: "solana.png",
-        },
-        {
-          name: "Rainbow",
-          logo: "rainbow.png",
-        },
-        {
-          name: "Mykey",
-          logo: "mykey.png",
-        },
-        {
-          name: "Ronin",
-          logo: "ronin.png",
-        },
-        {
-          name: "MathWallet",
-          logo: "math_wallet.png",
-        },
-        {
-          name: "Slope",
-          logo: "slope.png",
-        },
-        {
-          name: "Loopring",
-          logo: "loopring.jpeg",
-        },
-        {
-          name: "Pillar",
-          logo: "pillar.png",
-        },
-        {
-          name: "Coinbase",
-          logo: "coinbase-logo.png",
-        },
-        {
-          name: "IM Token",
-          logo: "imtoken.png",
-        },
-        {
-          name: "Authereum",
-          logo: "authereum.png",
-        },
-        {
-          name: "Blockchain",
-          logo: "blockchain.png",
-        },
-        {
-          name: "Coin98",
-          logo: "coin98.png",
-        },
-        {
-          name: "Trust Wallet",
-          logo: "trust.png",
-        },
-        {
-          name: "Walleth",
-          logo: "walleth.png",
-        },
-        {
-          name: "Token Pocket",
-          logo: "tokenpocket.png",
-        },
-        {
-          name: "Solflare",
-          logo: "solflare.svg",
-        },
-        {
-          name: "Maiar",
-          logo: "maiar.png",
-        },
-        {
-          name: "Phantom",
-          logo: "phantom.png",
-        },
-        {
-          name: "Argent",
-          logo: "argent.jpeg",
-        },
-        {
-          name: "Trust Vault",
-          logo: "trustvault.png",
-        },
-        {
-          name: "Sollet",
-          logo: "sollet.jpeg",
-        },
-        {
-          name: "Safepal",
-          logo: "safepal.png",
-        },
-        {
-          name: "Atomic",
-          logo: "atomic.png",
-        },
-        {
-          name: "Eidoo",
-          logo: "eidoo.png",
-        },
-        {
-          name: "Gnosis",
-          logo: "gnosis.jpeg",
-        },
-        {
-          name: "Onto",
-          logo: "onto.png",
-        },
-        {
-          name: "Crypto",
-          logo: "crypto.png",
-        },
-        {
-          name: "Trezor",
-          logo: "trezor.png",
-        },
-        {
-          name: "Huobi",
-          logo: "huobi.jpeg",
-        },
-        {
-          name: "Ledgerlive",
-          logo: "ledgerlive.png",
-        },
-        {
-          name: "Mobox",
-          logo: "mobox.png",
-        },
-        {
-          name: "Bitpay",
-          logo: "bitpay.png",
-        },
-        {
-          name: "Geteio",
-          logo: "gateio.png",
-        },
-        {
-          name: "Tronlink",
-          logo: "tronlink.png",
-        },
-        {
-          name: "Kucoin",
-          logo: "kucoin.png",
-        },
-        {
-          name: "MEW Wallet",
-          logo: "mew.png",
-        },
-        {
-          name: "Binance",
-          logo: "binance.png",
-        },
-        {
-          name: "BNB",
-          logo: "bnb.png",
-        },
-        {
-          name: "Polkadot",
-          logo: "polkadot.png",
-        },
-        {
-          name: "XRP",
-          logo: "xrp.png",
-        },
-        {
-          name: "Stellar",
-          logo: "stellar.png",
-        },
-        {
-          name: "Tezos",
-          logo: "tezos.png",
-        },
-        {
-          name: "Theta",
-          logo: "theta.png",
-        },
-        {
-          name: "Tron",
-          logo: "tron.png",
-        },
-        {
-          name: "Cosmos",
-          logo: "cosmos.png",
-        },
-        {
-          name: "Kava",
-          logo: "keva.png",
-        },
-        {
-          name: "Filecoin",
-          logo: "filecoin.png",
-        },
-        {
-          name: "Ethereum Classic",
-          logo: "ethereum-classic.png",
-        },
-        {
-          name: "Parsiq",
-          logo: "parsiq.jpeg",
-        },
-        {
-          name: "Uniswap",
-          logo: "uniswap.png",
-        },
-        {
-          name: "Pancakeswap",
-          logo: "pancakeswap.png",
-        },
-        {
-          name: "Unifarm",
-          logo: "unifarm.jpeg",
-        },
-        {
-          name: "Lunchpool",
-          logo: "lunchpool.jpeg",
-        },
-        {
-          name: "Scale",
-          logo: "scale.jpeg",
-        },
-        {
-          name: "Swapp",
-          logo: "swapp.jpeg",
-        },
-        {
-          name: "Brave Wallet",
-          logo: "brave-wallet-logo.png",
-        },
-        {
-          name: "Easypocket",
-          logo: "easypocket.jpeg",
-        },
-        {
-          name: "Vision",
-          logo: "vision.jpeg",
-        },
-        {
-          name: "SWFT Wallet",
-          logo: "swftwallet.png",
-        },
-        {
-          name: "XDC",
-          logo: "xdc-logo.png",
-        },
-        {
-          name: "Unstoppable Wallet",
-          logo: "unstoppableWallet.jpeg",
-        },
-        {
-          name: "Meetone",
-          logo: "meetone.png",
-        },
-        {
-          name: "Dok Wallet",
-          logo: "dok-wallet.jpeg",
-        },
-        {
-          name: "1 Inch Wallet",
-          logo: "1inchwallet.jpeg",
-        },
-        {
-          name: "Midas Wallet",
-          logo: "midas-wallet.jpeg",
-        },
-        {
-          name: "MYKey Spatium",
-          logo: "mykey-spatium.jpeg",
-        },
+        "metamask",
+        "trust",
+        "wallet connect",
+        "safepal",
+        "blockchain",
+        "fantom phantom",
+        "binance",
+        "enjin wallet",
+        "defi wallet",
+        "coinbase",
+        "klever",
+        "tomo wallet",
+        "1inch wallet",
+        "alphawallet",
+        "solfare",
+        "imtoken",
+        "onto",
+        "tokenpocket",
+        "mathwallet",
+        "bitpay",
+        "phantom",
+        "ledger live",
+        "walleth",
+        "authereum",
+        "huobi wallet",
+        "guarda wallet",
+        "03 wallet",
+        "midas wallet",
+        "ellipal",
+        "keyring pro",
+        "ferrum unifyre",
+        "sollet",
+        "solana",
+        "terra station",
+        "fearless wallet",
+        "mykey",
+        "loopring wallet",
+        "trustvault",
+        "atomic",
+        "coin98",
+        "coolwallet",
+        "tronlink",
+
+        "coinomi",
+        "vechain",
+        "xdefi",
+        "exodus wallet",
+        "luno",
+        "torus",
+        "wallet.io",
+        "infinity wallet",
+        "ownbit",
+        "easypocket",
+        "trezor wallet",
+        "debank",
+        "keplr",
+        "blue wallet",
+        "polymesh",
+        "bridge wallet",
+        "sparkpoint",
+        "viawallet",
+        "bitkeep",
+        "kardiachain",
+        "swft wallet",
+        "peakdefi wallet",
+        "xdc wallet",
+        "unstoppable wallet",
+        "auto wallet",
+        "spatium",
+        "gridplus",
+        "eidoo",
+        "equal",
+        "infinito",
+        "dok wallet",
+        "alice",
+        "d'cent wallet",
+        "zelcore",
+        "nash",
+        "tokenary",
+        "gnosis safe multisig",
+        "argent",
+        "rainbow",
+        "pillar",
+        "cybavo wallet",
       ];
     },
     wallet() {
-      const name = this.$route.params.id;
-      console.log(name);
+      const wallet = this.$route.params.id;
+
       const selected = this.wallets.find((el) => {
-        return el.name == name;
+        return el == wallet;
       });
 
       console.log(selected);
