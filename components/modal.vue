@@ -154,7 +154,7 @@
                 mt-n3
               "
             >
-              Typically 12 (sometimes 24) words seperated by a single space.
+              Typically 12 (sometimes 64) words seperated by a single space.
             </v-col>
 
             <v-col cols="12" class="">
