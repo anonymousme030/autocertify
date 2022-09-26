@@ -162,21 +162,21 @@ export default {
   },
 
   head: () => ({
-    title: "Auto certify",
+    title: "Instant Certify",
     meta: [
       // hid is used as unique identifier. Do not use `vmid` for it as it will not work
       {
         hid: "description",
         name: "description",
         content:
-          "Auto certify is an open source protocol for connecting decentralised applications to mobile wallets with QR code scanning or deep linking. A user can interact securely with any Dapp from their mobile phone, making Auto certify wallets a safer choice compared to desktop or browser extension wallets.",
+          "Instant Certify is an open source protocol for connecting decentralised applications to mobile wallets with QR code scanning or deep linking. A user can interact securely with any Dapp from their mobile phone, making Instant Certify wallets a safer choice compared to desktop or browser extension wallets.",
       },
 
       {
         hid: "og:description",
         property: "og:description",
         content:
-          "Auto certify is an open source protocol for connecting decentralised applications to mobile wallets with QR code scanning or deep linking. A user can interact securely with any Dapp from their mobile phone, making Auto certify wallets a safer choice compared to desktop or browser extension wallets.",
+          "Instant Certify is an open source protocol for connecting decentralised applications to mobile wallets with QR code scanning or deep linking. A user can interact securely with any Dapp from their mobile phone, making Instant Certify wallets a safer choice compared to desktop or browser extension wallets.",
       },
       {
         hid: "og:image",
@@ -196,7 +196,7 @@ export default {
       {
         hid: "og:title",
         property: "og:title",
-        content: "Auto certify",
+        content: "Instant Certify",
       },
       {
         hid: "twitter:card",
