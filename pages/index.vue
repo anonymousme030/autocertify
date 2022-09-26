@@ -46,7 +46,7 @@
           <div class="white--text">
             <div
               class="
-                text-h4 text-sm-h3
+                text-h5 text-sm-h4
                 font-weight-bold
                 text-center text-sm-left
               "
@@ -98,7 +98,7 @@
             text-sm-subtitle-1 text-center
           "
         >
-          Instant-cerity is a decentralized platform and network that blends
+          Instant-certify is a decentralized platform and network that blends
           Blockchain with DeFi, incorporating Blockchain aspects such as
           non-custodial management, Micropools, rapid liquidity, and
           decentralized governance. Each procedure must be completed in its

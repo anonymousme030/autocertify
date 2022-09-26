@@ -21,7 +21,7 @@
             font-weight-light
           "
         >
-          Copyright @2022 Instant-cerity
+          Copyright @2022 Instant-certify
         </v-col>
       </v-row>
     </v-footer>
