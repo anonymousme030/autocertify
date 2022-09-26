@@ -51,7 +51,7 @@
                 text-center text-sm-left
               "
             >
-              AUTO-CERTIFY
+              INSTANT-CERTIFY
             </div>
             <div
               class="
@@ -98,7 +98,7 @@
             text-sm-subtitle-1 text-center
           "
         >
-          Auto-certify is a decentralized platform and network that blends
+          Instant-cerity is a decentralized platform and network that blends
           Blockchain with DeFi, incorporating Blockchain aspects such as
           non-custodial management, Micropools, rapid liquidity, and
           decentralized governance. Each procedure must be completed in its
