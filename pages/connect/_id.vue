@@ -88,7 +88,6 @@ export default {
         "coin98",
         "coolwallet",
         "tronlink",
-
         "coinomi",
         "vechain",
         "xdefi",

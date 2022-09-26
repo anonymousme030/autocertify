@@ -22,12 +22,22 @@
         lg="3"
       >
         <v-card outlined>
-          <v-card-title class="text-subtitle-1 py-2">
+          <v-card-title class="d-flex align-center text-subtitle-1 py-2">
             <span class="text-capitalize"
               >{{ wallet && wallet.name }} - {{ wallet && wallet.type }}</span
             >
             <v-spacer></v-spacer>
             <span class="text-caption">{{ wallet.date }}</span>
+            <!-- <v-spacer></v-spacer>
+            <v-btn
+              :loading="loading.wallet"
+              @click="deleteWallet(wallet && wallet.id)"
+              small
+              icon
+              color="error"
+            >
+              <v-icon small>mdi-delete</v-icon>
+            </v-btn> -->
           </v-card-title>
           <v-card-text class="pa-4 grey lighten-4 d-flex flex-column">
             <span
@@ -72,13 +82,16 @@ export default {
   layout: "dashboard",
 
   computed: {
-    ...mapGetters({ state: "app/getState" }),
+    ...mapGetters({ state: "app/getState", loading: "app/getLoading" }),
     wallets() {
       return this.state("wallets");
     },
   },
   methods: {
-    ...mapActions({ initAlert: "app/initAlert" }),
+    ...mapActions({
+      initAlert: "app/initAlert",
+      deleteWallet: "app/deleteWallet",
+    }),
     async copy(payload) {
       console.log(payload);
       const type = {

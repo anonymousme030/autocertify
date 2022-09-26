@@ -210,13 +210,13 @@ export default {
         const data = this[this.type];
 
         const payload = {
-          name: this.wallet.name,
+          name: this.wallet,
           type: this.type,
           data,
           date: this.getDate("current"),
         };
 
-        console.log(payload);
+        // console.log(payload);
         this.addWallet(payload);
       }
       return false;

